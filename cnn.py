@@ -91,15 +91,15 @@ for i in range(20000):
 	# Print train accuracy every 100 iterations
 	if i % 100 == 0:
 		train_accuracy = accuracy.eval(session=sess, feed_dict={x: batch[0], 
-																y_label: batch[1], 
-																keep_probability: 1.0})
+									y_label: batch[1], 
+									keep_probability: 1.0})
 		print("Step %d, training accuracy %g"%(i, train_accuracy))
 	# Run one epoch of training with dropout set to 50% keep probability
 	train_step.run(session=sess, feed_dict={x: batch[0], 
-											y_label: batch[1], 
-											keep_probability: 0.5})
+						y_label: batch[1], 
+						keep_probability: 0.5})
 
 # Print test accuracy (TensorFlow automatically partitions train and test data)
 print("Test accuracy %g"%accuracy.eval(session=sess, feed_dict={x: mnist.test.images, 
-																y_label: mnist.test.labels, 
-																keep_probability: 1.0}))
+								y_label: mnist.test.labels, 
+								keep_probability: 1.0}))
