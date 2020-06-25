@@ -2,7 +2,7 @@
 # Author: Brian Westerman
 
 """
-Implement a convolutional neural network in the machine learning Python API TensorFlow.
+Implement a convolutional neural network in the machine learning Python API TensorFlow. (Heavily Based on the TensorFlow CNN tutorial)
 """
 
 import tensorflow as tf
